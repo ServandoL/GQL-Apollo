@@ -23,7 +23,7 @@ const typeDefs = gql`
     id: ID!
     bio: String
     name: String
-    sessions: [Sessions]
+    sessions: [Session]
   }
 
   type Session {

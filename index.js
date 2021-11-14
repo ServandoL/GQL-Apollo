@@ -2,9 +2,11 @@ const { ApolloServer } = require("apollo-server");
 const typeDefs = require("./data-access/schema");
 const resolvers = require("./data-access/resolvers");
 const SessionApi = require("./datasource/sessions");
+const SpeakerApi = require("./datasource/speakers");
 
 const dataSources = () => ({
-  SessionApi: new SessionApi()
+  sessionApi: new SessionApi(),
+  speakerApi: new SpeakerApi()
 });
 
 const server = new ApolloServer({ typeDefs, resolvers, dataSources });

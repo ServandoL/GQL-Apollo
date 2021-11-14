@@ -1,16 +1,16 @@
 const resolvers = {
   Query: {
     sessions: (parent, args, { dataSources }, info) => {
-      return dataSources.SessionApi.getSessions(args);
+      return dataSources.sessionApi.getSessions(args);
     },
     sessionById: (parent, { id }, { dataSources }, info) => {
-      return dataSources.SessionApi.getSessionById(id);
+      return dataSources.sessionApi.getSessionById(id);
     },
     speakers: (parent, args, { dataSources }, info) => {
-        return dataSources.speakersApi.getSpeakers();
+        return dataSources.speakerApi.getSpeakers();
     },
-    speakerByID: (parent, {id}, {dataSources}, info) => {
-        return dataSources.speakersApi.getSpeakerById(id);
+    speakerById: (parent, {id}, {dataSources}, info) => {
+        return dataSources.speakerApi.getSpeakerById(id);
     }
   },
 };
