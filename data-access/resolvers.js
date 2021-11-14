@@ -2,8 +2,8 @@ const sessions = require("../data/sessions.json");
 
 const resolvers = {
     Query: {
-        sessions: () => {
-            return sessions;
+        sessions: (parent, args, {dataSources}, info) => {
+            return dataSources.SessionApi.getSessions();
         }
     }
 }
