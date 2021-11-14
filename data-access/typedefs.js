@@ -2,7 +2,8 @@ const { gql } = require("apollo-server");
 
 const typeDefs = gql`
   type Query {
-    sessions: [Session]
+    sessions: [Session],
+    sessionById(id: ID): Session
   }
 
   type Session {
