@@ -1,5 +1,5 @@
 const { ApolloServer } = require("apollo-server");
-const typeDefs = require("./data-access/typedefs");
+const typeDefs = require("./data-access/schema");
 const resolvers = require("./data-access/resolvers");
 const SessionApi = require("./datasource/sessions");
 
